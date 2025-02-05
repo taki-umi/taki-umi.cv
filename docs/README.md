@@ -30,12 +30,13 @@ Qiita: <https://qiita.com/takiumi>
 **CI/CD** | Github Actions
 **その他ツール** | Docker/ Github/ Slack/ VSCode/ Copilot/ A5m2
 
-## バリューを発揮しやすい業務
+## バリューを発揮しやすい業務（発揮してきたバリュー）
 
 * SpringBoot/ Javaを使用したAPI・バッチシステム開発
-* ユニットテスト導入によるコード保守性の維持
+* ユニットテスト、インテグレーションテスト導入によるコード保守性の維持
 * Github Actionsを使用したCI/CD(自動テスト・自動デプロイ)整備による業務効率改善
 * Issue(課題チケット)、議事録のテンプレート化提案
+* 開発ツールの改善案提案
 
 ## バリューを発揮しやすい環境
 
