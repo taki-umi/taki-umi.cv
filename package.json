@@ -8,7 +8,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "textlint . && markdownlint **/*.md",
-    "build:pdf": "md-to-pdf docs/README.md --config-file ./pdf-configs/config.js --no-sandbox"
+    "build:pdf": "md-to-pdf docs/README.md --config-file ./pdf-configs/config.js"
   },
   "keywords": [],
   "author": "",
