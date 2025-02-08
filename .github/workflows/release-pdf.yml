@@ -16,12 +16,13 @@ jobs:
       pull-requests: write
     steps:
       - uses: actions/checkout@v4
+      - uses: browser-actions/setup-chrome@v1
       - uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: npm
       - run: npm install
-      - run: npx puppeteer install
+      - run: npx puppeteer browsers install chrome
       - run: npm run build:pdf
       - name: Create a draft release
         uses: softprops/action-gh-release@v1
