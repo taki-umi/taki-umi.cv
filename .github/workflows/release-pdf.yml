@@ -24,7 +24,7 @@ jobs:
       - run: npx puppeteer browsers install chrome
       - run: npm run build:pdf
       - name: Create a draft release
-          # PRのタイトルと内容をRelease内容に追加する
+        env:
           RELEASE_TAG: ${{ github.event.pull_request.title }}
         uses: softprops/action-gh-release@v2
         with:
