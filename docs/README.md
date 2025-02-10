@@ -25,6 +25,14 @@
 **CI/CD** | GitHub Actions
 **その他ツール** | Docker/ GitHub/ Slack/ VSCode/ Copilot/ A5m2
 
+## 資格
+
+項目 | 取得日
+--- | ---
+AWS Certified Cloud Practitioner | 2021.08
+AWS Certified Solutions Architect - Associate | 2023.02
+AWS Certified Developer - Associate | 2023.06
+
 ## バリューを発揮しやすい業務（発揮してきたバリュー）
 
 * SpringBoot/ Java を使用した API ・バッチシステム開発
