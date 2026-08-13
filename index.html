@@ -1,16 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>taki-umi Portfolio</title>
+    <title>taki-umi - Portfolio</title>
     <link rel="stylesheet" href="stayle.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -18,7 +18,6 @@
   <body>
     <!-- ナビゲーションセクション -->
     <nav id="desktop-nav">
-      <div class="logo">FarStep</div>
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
@@ -31,7 +30,7 @@
 
     <!-- ハンバーガー -->
     <nav id="hamburger-nav">
-      <div class="logo">FarStep</div>
+      <div class="logo"></div> <!-- // ロゴ決まったら -->
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
@@ -49,23 +48,19 @@
       </div>
     </nav>
 
-    <!-- プロフィーセクション -->
+    <!-- プロフィールセクション -->
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="FarStep profile picture" />
+        <img src="./assets/profile-pic.png" alt="滝川拓海 プロフィール写真" />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Takumi Takikawa</p>
         <h1 class="title">滝川 拓海</h1>
-        <p class="section__text__p2">Frontend/ Backend Developer</p>
-        <div>
-          <img src="https://img.shields.io/badge/Javascript-276DC3.svg?logo=javascript&style=flat-square">
-          <img src="https://img.shields.io/badge/-TypeScript-007ACC.svg?logo=typescript&style=flat-square">
-        </div>
+        <p class="profile-greeting">ご覧いただきありがとうございます！<br />滝川拓海と申します！</p>
         <div class="btn-container">
           <button
             class="btn btn-color-2"
-            onclick="window.open('./assets/resume-example.pdf')"
+            onclick="window.open('./docs/職務経歴書_TT_202608.pdf')"
           >
             Download CV
           </button>
@@ -75,19 +70,17 @@
           >
             Contact Info
           </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://linkedin.com/'"
-          />
           <img
             src="./assets/github.png"
             alt="My Github profile"
             class="icon"
             onclick="location.href='https://github.com/taki-umi'"
+          />
+          <img
+            src="./assets/qiita-icon.png"
+            alt="My Qiita profile"
+            class="icon"
+            onclick="location.href='https://qiita.com/taki-umi'"
           />
         </div>
       </div>
@@ -95,38 +88,105 @@
 
     <!-- Aboutセクション -->
     <section id="about">
-      <p class="section__text__p1">わたしについて</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>2+ years <br />Frontend Development</p>
+      <p class="section__text__p1">About Me</p>
+      <h1 class="title">私について</h1>
+
+      <!-- 自己紹介文 -->
+      <div class="about-intro">
+        <div class="about-intro__content">
+          <p>
+            私は、人と協力して一つのものを作り上げるプロセスそのものが好きです。自分の手がけた仕事が誰かの役に立ち、部署の課題が解決される瞬間に、エンジニアとしての大きな喜びを感じます。だからこそ、現場では常に「今の自分にできる役割は何か」を自問自答し、チームのためにどう動くべきかを第一に考えるようにしています。
+          </p>
+          <br/>
+          <p>
+            日々の業務で特に大切にしているのは、立場を超えたコミュニケーションです。チーム内はもちろん、別部署の方やクライアントとも顔の見える信頼関係を築くことで、困難な状況でも本音で話し合い、プロジェクトを前進させられると信じているからです。また、自分の知見を活かした「意見」を持つことも忘れません。恐れずに提案し、意見が合わなくても納得いくまで議論を重ねることが、結果として質の高いプロダクトに繋がると考えています。
+          </p>
+          <br/>
+          <p>
+            一方で、仕事の話ばかりではなく、ちょっとした雑談や冗談を言い合えるような、肩の力の抜けた空気感も大切にしています。チームの中に「何を言っても大丈夫だ」という心理的安全性があってこそ、最高のパフォーマンスが発揮できると思うからです。メンバーが困っていれば自然と手を差し伸べ合える、そんな温かいチーム作りを自分から実践していきたいと思っています。
+          </p>
+          <br/>
+          <p>
+            現在はエンジニアとしての開発に留まらず、ユーザーの視点に立った業務提案や、サービスを成長させるためのSEO対策、Webデザインといった新しい領域にも積極的に挑戦しています。技術の枠に縛られず、事業をより良くするために必要なことであれば、これからも好奇心を持って泥臭く取り組んでいきたいです。
+          </p>
+        </div>
+        <!-- 経歴タイムライン -->
+        <div class="about-timeline">
+          <h2 class="about-sub-title">経歴</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">2013.04 - 2017.03</span>
+                <p class="timeline-text">東京工科大学 コンピュータ・サイエンス学部</p>
+              </div>
             </div>
-            <div class="details-container">
-              <img src="./assets/education.png" alt="Education icon" class="icon" />
-              <h3>Education</h3>
-              <p>Bachelor of Engineering<br />Master of Engineering</p>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">2017.04 - 2019.09</span>
+                <p class="timeline-text">コンピュートロン株式会社</p>
+              </div>
             </div>
-          </div>
-          <div class="text-container">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-              reprehenderit et laborum, rem, dolore eum quod voluptate
-              exercitationem nobis, nihil esse debitis maxime facere minus sint
-              delectus velit in eos quo officiis explicabo deleniti dignissimos.
-              Eligendi illum libero dolorum cum laboriosam corrupti quidem,
-              reiciendis ea magnam? Nulla, impedit fuga!
-            </p>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">2019.10 - 2020.12</span>
+                <p class="timeline-text">株式会社ニーズウェル</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">2021.01 - 2021.06</span>
+                <p class="timeline-text">株式会社TOMO PARTNERS</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">2021.07 - 2025.11</span>
+                <p class="timeline-text">個人事業主として従事</p>
+              </div>
+            </div>
+            <div class="timeline-item timeline-item--current">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">2025.12 - 現在</span>
+                <p class="timeline-text">株式会社マルチプル</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      <!-- 強み -->
+      <div class="about-strength">
+        <h2 class="about-sub-title">強み・得意領域</h2>
+        <div class="strength-cards">
+          <div class="strength-card">
+            <div class="strength-icon">&#9997;</div>
+            <h3>バックエンド開発</h3>
+            <p>SpringBoot/Java を用いたAPI・バッチシステム開発で4年以上の豊富な経験と実績</p>
+          </div>
+          <div class="strength-card">
+            <div class="strength-icon">&#9989;</div>
+            <h3>テスト・品質向上</h3>
+            <p>ユニットテスト・インテグレーションテスト導入によるコード保守性の維持と品質向上</p>
+          </div>
+          <div class="strength-card">
+            <div class="strength-icon">&#9881;</div>
+            <h3>CI/CD・業務改善</h3>
+            <p>GitHub Actionsを使用したCI/CD整備、Issueテンプレート化などの業務効率改善</p>
+          </div>
+          <div class="strength-card">
+            <div class="strength-icon">&#128483;</div>
+            <h3>コミュニケーション</h3>
+            <p>チームメンバーとの円滑なコミュニケーションと信頼関係構築、積極的な改善提案</p>
+          </div>
+        </div>
+      </div>
+
       <img
         src="./assets/arrow.png"
         alt="Arrow icon"
@@ -138,150 +198,124 @@
     <!-- Experience セクション -->
     <section id="experience">
       <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
+      <h1 class="title">私の経験・スキル</h1>
       <div class="experience-details-container">
         <div class="about-containers">
+          <!-- プログラミング言語 -->
           <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
+            <h2 class="experience-sub-title">Languages</h2>
+            <div class="skill-list">
+              <div class="skill-item skill-item--active">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" class="skill-icon" />
+                <div class="skill-info">
+                  <div class="skill-name-row"><h3>TypeScript</h3><span class="skill-badge-now">Now</span><span class="skill-years">4ヶ月</span></div>
+                  <div class="skill-bar"><div class="skill-bar__fill skill-bar__fill--active" style="width: 7%"></div></div>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
+              </div>
+              <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="skill-icon" />
+                <div class="skill-info">
+                  <div class="skill-name-row"><h3>Java</h3><span class="skill-years">5年</span></div>
+                  <div class="skill-bar"><div class="skill-bar__fill" style="width: 100%"></div></div>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
+              </div>
+              <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-icon" />
+                <div class="skill-info">
+                  <div class="skill-name-row"><h3>JavaScript</h3><span class="skill-years">4年</span></div>
+                  <div class="skill-bar"><div class="skill-bar__fill" style="width: 80%"></div></div>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>React</h3>
-                  <p>Intermediate</p>
+              </div>
+              <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" class="skill-icon" />
+                <div class="skill-info">
+                  <div class="skill-name-row"><h3>C++</h3><span class="skill-years">5年</span></div>
+                  <div class="skill-bar"><div class="skill-bar__fill" style="width: 100%"></div></div>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
+              </div>
+              <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg" alt="Go" class="skill-icon" />
+                <div class="skill-info">
+                  <div class="skill-name-row"><h3>Go</h3><span class="skill-years">1年</span></div>
+                  <div class="skill-bar"><div class="skill-bar__fill" style="width: 20%"></div></div>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Next.js</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
+              </div>
             </div>
           </div>
-          <!-- バックエンド -->
+          <!-- フレームワーク・インフラ -->
           <div class="details-container">
-            <h2 class="experience-sub-title">Backend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>MySQL</h3>
-                  <p>Basic</p>
+            <h2 class="experience-sub-title">Frameworks & Infra</h2>
+            <div class="skill-list">
+              <div class="skill-item skill-item--active">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" class="skill-icon" />
+                <div class="skill-info">
+                  <div class="skill-name-row"><h3>Next.js</h3><span class="skill-badge-now">Now</span><span class="skill-years">4ヶ月</span></div>
+                  <div class="skill-bar"><div class="skill-bar__fill skill-bar__fill--active" style="width: 7%"></div></div>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node.js</h3>
-                  <p>Intermediate</p>
+              </div>
+              <div class="skill-item skill-item--active">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="Terraform" class="skill-icon" />
+                <div class="skill-info">
+                  <div class="skill-name-row"><h3>Terraform</h3><span class="skill-badge-now">Now</span><span class="skill-years">4ヶ月</span></div>
+                  <div class="skill-bar"><div class="skill-bar__fill skill-bar__fill--active" style="width: 7%"></div></div>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express.js</h3>
-                  <p>Intermediate</p>
+              </div>
+              <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring Boot" class="skill-icon" />
+                <div class="skill-info">
+                  <div class="skill-name-row"><h3>Spring Boot</h3><span class="skill-years">5年</span></div>
+                  <div class="skill-bar"><div class="skill-bar__fill" style="width: 100%"></div></div>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Ruby</h3>
-                  <p>Intermediate</p>
+              </div>
+              <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" class="skill-icon" />
+                <div class="skill-info">
+                  <div class="skill-name-row"><h3>AWS</h3><span class="skill-years">5年</span></div>
+                  <div class="skill-bar"><div class="skill-bar__fill" style="width: 100%"></div></div>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Docker</h3>
-                  <p>Intermediate</p>
+              </div>
+              <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="skill-icon" />
+                <div class="skill-info">
+                  <div class="skill-name-row"><h3>Docker</h3><span class="skill-years">5年</span></div>
+                  <div class="skill-bar"><div class="skill-bar__fill" style="width: 100%"></div></div>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>AWS</h3>
-                  <p>Basic</p>
+              </div>
+              <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="skill-icon" />
+                <div class="skill-info">
+                  <div class="skill-name-row"><h3>MySQL</h3><span class="skill-years">5年</span></div>
+                  <div class="skill-bar"><div class="skill-bar__fill" style="width: 100%"></div></div>
                 </div>
-              </article>
+              </div>
+              <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grpc/grpc-original.svg" alt="gRPC" class="skill-icon" />
+                <div class="skill-info">
+                  <div class="skill-name-row"><h3>gRPC</h3><span class="skill-years">4年</span></div>
+                  <div class="skill-bar"><div class="skill-bar__fill" style="width: 80%"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="skill-icon" />
+                <div class="skill-info">
+                  <div class="skill-name-row"><h3>React</h3><span class="skill-years">1年</span></div>
+                  <div class="skill-bar"><div class="skill-bar__fill" style="width: 20%"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg" alt="Gin" class="skill-icon" />
+                <div class="skill-info">
+                  <div class="skill-name-row"><h3>Gin</h3><span class="skill-years">1年</span></div>
+                  <div class="skill-bar"><div class="skill-bar__fill" style="width: 20%"></div></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" alt="GitHub Actions" class="skill-icon" />
+                <div class="skill-info">
+                  <div class="skill-name-row"><h3>GitHub Actions</h3><span class="skill-years">CI/CD</span></div>
+                  <div class="skill-bar"><div class="skill-bar__fill" style="width: 60%"></div></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -294,85 +328,152 @@
       />
     </section>
 
-    <!-- プロジェクトセクション -->
+    <!-- プロジェクトセクション（経歴カード横スクロール） -->
     <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
+      <p class="section__text__p1">Projects</p>
+      <h1 class="title">職務経歴</h1>
+      <div class="projects-scroll-wrapper">
+        <button class="scroll-btn scroll-btn--left" aria-label="左にスクロール">&#10094;</button>
+        <div class="projects-scroll-container">
+
+          <!-- カード0: トレカカード事業 -->
+          <a href="./projects/project-0.html" class="project-card">
+            <div class="project-card__img-placeholder">
+              <span>Image</span>
             </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
+            <div class="project-card__body">
+              <h3 class="project-card__title">トレカカード事業 カード買取サイト運営</h3>
+              <span class="project-card__period">2025/12 ~ 参画中</span>
+              <p class="project-card__desc">自社カード郵送買取サイトの機能改修・SEO対策・店舗業務システム化</p>
+              <div class="project-card__tags">
+                <span class="tag">Next.js</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">AWS</span>
+              </div>
             </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
+          </a>
+
+          <!-- カード1: クレジットカード決済会社 -->
+          <a href="./projects/project-1.html" class="project-card">
+            <div class="project-card__img-placeholder">
+              <span>Image</span>
             </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
+            <div class="project-card__body">
+              <h3 class="project-card__title">クレジットカード決済会社 システム開発支援</h3>
+              <span class="project-card__period">2025/05 ~ 2025/11</span>
+              <p class="project-card__desc">クレジットカード会員サービス（マイページ）の機能改修および保守運用</p>
+              <div class="project-card__tags">
+                <span class="tag">Java</span>
+                <span class="tag">Spring Boot</span>
+                <span class="tag">AWS</span>
+              </div>
             </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
+          </a>
+
+          <!-- カード2: 旅行代理店向け -->
+          <a href="./projects/project-2.html" class="project-card">
+            <div class="project-card__img-placeholder">
+              <span>Image</span>
             </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
+            <div class="project-card__body">
+              <h3 class="project-card__title">旅行代理店向け システム開発支援</h3>
+              <span class="project-card__period">2022/08 ~ 2025/03</span>
+              <p class="project-card__desc">海外ホテル・アクティビティの商材登録および予約管理システム開発</p>
+              <div class="project-card__tags">
+                <span class="tag">Java</span>
+                <span class="tag">Spring Boot</span>
+                <span class="tag">gRPC</span>
+                <span class="tag">AWS</span>
+              </div>
             </div>
-          </div>
+          </a>
+
+          <!-- カード3: 認証認可システム -->
+          <a href="./projects/project-3.html" class="project-card">
+            <div class="project-card__img-placeholder">
+              <span>Image</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">認証認可システム開発支援</h3>
+              <span class="project-card__period">2024/05 ~ 2025/03</span>
+              <p class="project-card__desc">内製システムの認証認可機能を担うシステムのメンテナンス</p>
+              <div class="project-card__tags">
+                <span class="tag">Go</span>
+                <span class="tag">React</span>
+                <span class="tag">Gin</span>
+                <span class="tag">AWS</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- カード4: 生保 -->
+          <a href="./projects/project-4.html" class="project-card">
+            <div class="project-card__img-placeholder">
+              <span>Image</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">生保 システム開発支援</h3>
+              <span class="project-card__period">2021/10 ~ 2022/06</span>
+              <p class="project-card__desc">営業員向け携帯デバイス新規システム開発（AI情報表示機能）</p>
+              <div class="project-card__tags">
+                <span class="tag">Java</span>
+                <span class="tag">Spring Boot</span>
+                <span class="tag">Vue</span>
+                <span class="tag">Azure</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- カード5: 電力監視 -->
+          <a href="./projects/project-5.html" class="project-card">
+            <div class="project-card__img-placeholder">
+              <span>Image</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">電力監視システム開発支援</h3>
+              <span class="project-card__period">2021/02 ~ 2021/08</span>
+              <p class="project-card__desc">電力機器間の状態監視・メッセージ通知システムの機能改修</p>
+              <div class="project-card__tags">
+                <span class="tag">C++</span>
+                <span class="tag">Java</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- カード6: PACS -->
+          <a href="./projects/project-6.html" class="project-card">
+            <div class="project-card__img-placeholder">
+              <span>Image</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">PACS（医療用画像管理）システム開発支援</h3>
+              <span class="project-card__period">2019/10 ~ 2020/12</span>
+              <p class="project-card__desc">レントゲン画像等のデータをネットワーク管理する医療用画像管理システム</p>
+              <div class="project-card__tags">
+                <span class="tag">C++</span>
+                <span class="tag">C#</span>
+                <span class="tag">Azure</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- カード7: 半導体 -->
+          <a href="./projects/project-7.html" class="project-card">
+            <div class="project-card__img-placeholder">
+              <span>Image</span>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">半導体製造装置ソフト開発支援</h3>
+              <span class="project-card__period">2017/07 ~ 2019/09</span>
+              <p class="project-card__desc">半導体ファウンドリ向け半導体製造装置のソフトウェア開発</p>
+              <div class="project-card__tags">
+                <span class="tag">C++</span>
+              </div>
+            </div>
+          </a>
+
         </div>
+        <button class="scroll-btn scroll-btn--right" aria-label="右にスクロール">&#10095;</button>
       </div>
       <img
         src="./assets/arrow.png"
@@ -393,15 +494,7 @@
             alt="Email icon"
             class="icon contact-icon email-icon"
           />
-          <p><a href="mailto:examplemail@gmail.com">Example@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+          <p><a href="mailto:takikawa.work@gmail.com">takikawa.work@gmail.com</a></p>
         </div>
       </div>
     </section>
@@ -418,7 +511,7 @@
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2025 FarStep. All Rights Reserved.</p>
+      <p>Copyright &#169; 2026 Takumi Takikawa All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
