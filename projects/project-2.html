@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>旅行代理店向け システム開発支援 - 滝川拓海</title>
+    <link rel="stylesheet" href="../stayle.css" />
+    <link rel="stylesheet" href="../mediaqueries.css" />
+  </head>
+  <body>
+    <div class="project-detail">
+      <a href="../index.html#projects" class="project-detail__back">&larr; プロジェクト一覧に戻る</a>
+
+      <div class="project-detail__img-placeholder">
+        <span>Image</span>
+      </div>
+
+      <div class="project-detail__header">
+        <h1 class="project-detail__title">旅行代理店向け システム開発支援業務</h1>
+        <span class="project-detail__period">2022/08 ~ 2025/03</span>
+      </div>
+
+      <div class="project-detail__meta">
+        <table>
+          <tr><th>チーム規模</th><td>10人ほど</td></tr>
+          <tr><th>言語・FW</th><td>Java / JavaScript / Spring Boot / gRPC</td></tr>
+          <tr><th>インフラ</th><td>AWS</td></tr>
+          <tr><th>ツール</th><td>GitHub / Slack / A5m2 / Docker</td></tr>
+          <tr><th>業界</th><td>旅行業界</td></tr>
+          <tr><th>役割</th><td>システムの要件定義、設計、開発、保守運用</td></tr>
+        </table>
+      </div>
+
+      <div class="project-detail__section">
+        <h2>プロダクト概要</h2>
+        <p>海外ホテル、海外アクティビティの商材登録および予約管理をするためのシステム開発</p>
+      </div>
+
+      <div class="project-detail__section">
+        <h2>チームの課題</h2>
+        <ul>
+          <li>重複コードが複数箇所存在し、影響箇所を特定するのに時間がかかった</li>
+          <li>1000行を超える巨大なクラスファイルが複数存在し、コードの見通しが悪く修正箇所の特定に時間がかかった</li>
+          <li>仕様変更や機能改修に平均3~5日を要し、リファクタリング箇所でバグが発生するなど開発効率が著しく低下していた</li>
+        </ul>
+      </div>
+
+      <div class="project-detail__section">
+        <h2>課題に対するチャレンジ</h2>
+        <p>「ソースコードの変更をしやすくする」ことを目標に、以下の段階的なアプローチで取り組みました。</p>
+        <h3 style="margin-top: 1rem; margin-bottom: 0.5rem; font-size: 1.1rem;">1. JUnitを用いたユニットテストの充実</h3>
+        <ul>
+          <li>JUnitを導入し、テストケースの作成を効率化</li>
+          <li>各クラスの主要なメソッドに対して、網羅率80%以上のテストコードを作成</li>
+          <li>ユニットテストをPR時、ブランチにマージ時にCIで実行できるように整備</li>
+          <li>テストケース名ルールを定めて、テストの目的を明確化</li>
+        </ul>
+        <pre>// NG - 具体的でないテスト名
+@Test
+public void testValidate_NG() { ... }
+
+// OK - 具体的で分かりやすいテスト名
+@Test
+public void test_validate_予約番号が指定されていない場合はエラー() { ... }</pre>
+        <h3 style="margin-top: 1rem; margin-bottom: 0.5rem; font-size: 1.1rem;">2. インテグレーションテストコードの追加</h3>
+        <ul>
+          <li>各APIの試験観点を洗い出し、テストケースとしてテストコードを作成</li>
+          <li>インテグレーションテスト用のgradleタスクを定義し、CIで実行できるように整備</li>
+        </ul>
+      </div>
+
+      <div class="project-detail__section">
+        <h2>結果・成果</h2>
+        <ul>
+          <li>デグレ発生率を大きく削減し、手戻りを大幅に減らすことができた</li>
+          <li>開発者が率先してコードを変更することができるようになった</li>
+          <li>コード行数を平均200行以下のクラスにリファクタリングでき、可読性を向上</li>
+          <li>チームメンバーから「テストコードがあることで安心して変更できるようになった」との声</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

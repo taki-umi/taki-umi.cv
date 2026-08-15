@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>認証認可システム開発支援 - 滝川拓海</title>
+    <link rel="stylesheet" href="../stayle.css" />
+    <link rel="stylesheet" href="../mediaqueries.css" />
+  </head>
+  <body>
+    <div class="project-detail">
+      <a href="../index.html#projects" class="project-detail__back">&larr; プロジェクト一覧に戻る</a>
+
+      <div class="project-detail__img-placeholder">
+        <span>Image</span>
+      </div>
+
+      <div class="project-detail__header">
+        <h1 class="project-detail__title">認証認可システム開発支援業務</h1>
+        <span class="project-detail__period">2024/05 ~ 2025/03</span>
+      </div>
+
+      <div class="project-detail__meta">
+        <table>
+          <tr><th>チーム規模</th><td>2人</td></tr>
+          <tr><th>言語・FW</th><td>Go / React / Gin</td></tr>
+          <tr><th>インフラ</th><td>AWS</td></tr>
+          <tr><th>ツール</th><td>GORM / GitHub / Slack / Docker</td></tr>
+          <tr><th>業界</th><td>旅行業界</td></tr>
+          <tr><th>役割</th><td>システムの追加要望改修・保守運用</td></tr>
+        </table>
+      </div>
+
+      <div class="project-detail__section">
+        <h2>プロダクト概要</h2>
+        <p>旅行代理店会社の事業で扱う内製システムの認証認可機能を担うシステムのメンテナンス</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; color: rgb(130,130,130);">※旅行代理店向けシステム開発支援業務と並行で対応</p>
+      </div>
+
+      <div class="project-detail__section">
+        <h2>チームの課題</h2>
+        <ul>
+          <li>システムのアーキテクチャ、ローカル環境構築手順などのドキュメントが一切存在せず、キャッチアップに時間がかかっていた</li>
+          <li>DBドキュメント（ER図、テーブル定義書など）が存在しないため、システムの理解・把握が難しかった</li>
+        </ul>
+      </div>
+
+      <div class="project-detail__section">
+        <h2>課題に対するチャレンジ</h2>
+        <h3 style="margin-top: 1rem; margin-bottom: 0.5rem; font-size: 1.1rem;">1. READMEの作成</h3>
+        <ul>
+          <li>システムの概要、使用言語・FWのバージョン情報、ディレクトリ構成、ローカル環境構築手順、デバッグ方法を網羅</li>
+          <li>特に「デバッグ方法」について詳細な情報を記載し、後任者がスムーズに開発に着手できるよう工夫</li>
+        </ul>
+        <h3 style="margin-top: 1rem; margin-bottom: 0.5rem; font-size: 1.1rem;">2. DBドキュメント作成の文化定着</h3>
+        <ul>
+          <li>tblsを導入し、ER図・テーブル定義書・カラム定義書などを自動生成する仕組みを構築</li>
+          <li>READMEにtblsの使い方と運用方法を記載し、ドキュメントが常に最新の状態に保たれるようにした</li>
+        </ul>
+      </div>
+
+      <div class="project-detail__section">
+        <h2>結果・成果</h2>
+        <ul>
+          <li>後任者が開発を引き継ぐ際の学習コストを大幅に削減</li>
+          <li>DBドキュメントによりシステム全体の理解が深まり、機能改修をスムーズに進めることができた</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
